@@ -11,7 +11,8 @@ export class RequestComponent {
   @ViewChild('f') demoForm: NgForm;
 	
 	onSubmit() {
-		console.log(this.demoForm);
+    console.log(this.demoForm);
+    this.demoForm.reset();
 	}
 
 }
