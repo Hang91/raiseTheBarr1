@@ -1,5 +1,6 @@
 import { Component, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { SendEmailService } from './../../../services/sendemail.service';
 
 @Component({
   selector: 'app-request',
@@ -7,11 +8,25 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./request.component.css']
 })
 export class RequestComponent {
-
+  constructor(private sendEmailService: SendEmailService) {}
   @ViewChild('f') demoForm: NgForm;
-	
+
+	user = {
+    firstname: '',
+    lastname: '',
+    email: ''
+  };
+
 	onSubmit() {
-		console.log(this.demoForm);
+    this.user.firstname = this.demoForm.value.userData.firstname;
+    this.user.lastname = this.demoForm.value.userData.lastname;
+    this.user.email = this.demoForm.value.userData.email;
+    this.sendEmailService.sendEmail(this.user).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    );
+    //this.sendEmailService.sendEmail(this.user);
+		
 	}
 
 }
