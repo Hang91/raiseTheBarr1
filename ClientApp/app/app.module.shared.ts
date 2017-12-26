@@ -8,8 +8,6 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -20,13 +18,17 @@ import { CompanyComponent } from './components/home/company/company.component';
 import { PartnerComponent } from './components/home/partner/partner.component';
 import { ServiceComponent } from './components/home/service/service.component';
 import { RequestComponent } from './components/home/request/request.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { FaqStartComponent } from './components/faq/faq-start/faq-start.component';
+import { FaqListComponent } from './components/faq/faq-list/faq-list.component';
+import { FaqItemComponent } from './components/faq/faq-list/faq-item/faq-item.component';
+import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.component';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
         HomeComponent,
         FooterComponent,
         AboutUsComponent,
@@ -38,6 +40,11 @@ import { RequestComponent } from './components/home/request/request.component';
         PartnerComponent,
         ServiceComponent,
         RequestComponent,
+        FaqComponent,
+        FaqStartComponent,
+        FaqListComponent,
+        FaqItemComponent,
+        FaqDetailComponent,
     ],
     imports: [
         CommonModule,
@@ -49,8 +56,10 @@ import { RequestComponent } from './components/home/request/request.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'faq', component: FaqComponent, children: [
+                { path: '', component: FaqStartComponent },
+                { path: ':id', component: FaqDetailComponent },
+              ]},
             { path: 'about-us', component: AboutUsComponent },
             { path: 'contact-us', component: ContactUsComponent },    
             { path: '**', redirectTo: 'home' }
