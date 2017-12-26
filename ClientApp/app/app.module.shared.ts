@@ -23,6 +23,8 @@ import { FaqStartComponent } from './components/faq/faq-start/faq-start.componen
 import { FaqListComponent } from './components/faq/faq-list/faq-list.component';
 import { FaqItemComponent } from './components/faq/faq-list/faq-item/faq-item.component';
 import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.component';
+import { SendEmailService } from './services/sendemail.service';
+
 
 
 @NgModule({
@@ -64,6 +66,9 @@ import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.compo
             { path: 'contact-us', component: ContactUsComponent },    
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers: [
+        SendEmailService
     ]
 })
 export class AppModuleShared {
