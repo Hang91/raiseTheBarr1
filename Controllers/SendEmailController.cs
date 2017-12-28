@@ -31,17 +31,7 @@ namespace raiseTheBarr1.Controllers
                 client_mail.IsBodyHtml = false;
 
                 //sender
-                SmtpClient smtp = new SmtpClient();  
-                // smtp.Host = "smtp.126.com"; 
-                // smtp.Port = 465; 
-                // smtp.UseDefaultCredentials = false;  
-                // smtp.Credentials = new System.Net.NetworkCredential("zhuyingcau@126.com", "98437126"); // Enter senders User name and password  
-                
-                // smtp.Host = "smtp.qq.com";
-                // smtp.Port = 587;  
-                // smtp.UseDefaultCredentials = false;  
-                // smtp.Credentials = new System.Net.NetworkCredential("891796378@qq.com", "qq98437"); // Enter senders User name and password  
-                
+                SmtpClient smtp = new SmtpClient();
 
                 smtp.Host = "smtp.gmail.com";
                 smtp.Port = 587;  
