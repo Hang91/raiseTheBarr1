@@ -1,5 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Net.Mail;  
+using System.Web;  
+using Microsoft.AspNetCore.Mvc;
 using raiseTheBarr1.Models;
 using System.Net.Mail;
 using System.Net;
@@ -47,6 +51,7 @@ namespace raiseTheBarr1.Controllers
 
             // smtpClient.Send(mail);
             // return Ok(user);
+
         }
     }
 }
