@@ -23,7 +23,7 @@ export class RequestComponent {
     this.user.firstname = this.demoForm.value.userData.firstname;
     this.user.lastname = this.demoForm.value.userData.lastname;
     this.user.email = this.demoForm.value.userData.email;
-    this.sendEmailService.sendEmail(this.user).subscribe(
+    this.sendEmailService.sendEmailForDemo(this.user).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     );
