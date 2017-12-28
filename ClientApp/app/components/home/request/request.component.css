@@ -9,3 +9,7 @@ input.ng-invalid.ng-touched {
 .form-group input {
 	width: 30%;
 }
+
+.thanks {
+	margin-top: 30px;
+}

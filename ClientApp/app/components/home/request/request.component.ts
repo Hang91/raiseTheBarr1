@@ -10,6 +10,7 @@ import { SendEmailService } from './../../../services/sendemail.service';
 export class RequestComponent {
   constructor(private sendEmailService: SendEmailService) {}
   @ViewChild('f') demoForm: NgForm;
+  submitted = false;
 
 	user = {
     firstname: '',
@@ -18,6 +19,7 @@ export class RequestComponent {
   };
 
 	onSubmit() {
+    this.submitted = true;
     this.user.firstname = this.demoForm.value.userData.firstname;
     this.user.lastname = this.demoForm.value.userData.lastname;
     this.user.email = this.demoForm.value.userData.email;
