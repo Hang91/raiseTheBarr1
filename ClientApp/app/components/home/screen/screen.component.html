@@ -13,25 +13,26 @@
   
       <div class="button-row">
         <div class="col-md-4">
-          <button class="btn btn-secondary btn-sl" (click)="showDemo = !showDemo; showBeta = true">Request a Demo</button>
+          <button class="btn btn-secondary btn-sl" (click)="hideDemo = !hideDemo; hideChat = true; hideBeta = true">Request a Demo</button>
         </div>
         <div class="col-md-4">
-          <button type="button" class="btn btn-secondary btn-sl">Test our Chatbot</button>
+          <button type="button" class="btn btn-secondary btn-sl" (click)="hideChat = !hideChat; hideDemo = true; hideBeta = true">Test our Chatbot</button>
         </div>
         <div class="col-md-4">
-          <button type="button" class="btn btn-secondary btn-sl" (click)="showBeta = !showBeta; showDemo = true">Join our Beta</button>
+          <button type="button" class="btn btn-secondary btn-sl" (click)="hideBeta = !hideBeta; hideDemo = true; hideChat = true">Join our Beta</button>
         </div>
       </div>
     </div>
-    <div class="container down" [hidden]="showDemo && showBeta">
+    <div class="container down" [hidden]="hideDemo && hideChat && hideBeta">
       <div class="form-row">
         <div class="col-md-4">
-          <app-request [hidden]="showDemo"></app-request>
+          <app-request [hidden]="hideDemo"></app-request>
         </div>
         <div class="col-md-4">
+          <app-chatbox [hidden]="hideChat"></app-chatbox>
         </div>
         <div class="col-md-4">
-          <app-beta [hidden]="showBeta"></app-beta>
+          <app-beta [hidden]="hideBeta"></app-beta>
         </div>
       </div>
       

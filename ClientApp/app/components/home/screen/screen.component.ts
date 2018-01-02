@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ScreenComponent {
 
-  showDemo = true;
-  showBeta = true;
+  hideDemo = true;
+  hideChat = true;
+  hideBeta = true;
 }

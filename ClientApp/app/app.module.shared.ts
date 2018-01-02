@@ -14,6 +14,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { MapComponent } from './components/contact-us/map/map.component';
 import { ScreenComponent } from './components/home/screen/screen.component';
 import { BetaComponent } from './components/home/beta/beta.component';
+import { ChatboxComponent } from './components/home/chatbox/chatbox.component';
 import { CompanyComponent } from './components/home/company/company.component';
 import { PartnerComponent } from './components/home/partner/partner.component';
 import { ServiceComponent } from './components/home/service/service.component';
@@ -24,6 +25,8 @@ import { FaqListComponent } from './components/faq/faq-list/faq-list.component';
 import { FaqItemComponent } from './components/faq/faq-list/faq-item/faq-item.component';
 import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.component';
 import { SendEmailService } from './services/sendemail.service';
+
+
 
 
 
@@ -38,6 +41,7 @@ import { SendEmailService } from './services/sendemail.service';
         MapComponent,
         ScreenComponent,
         BetaComponent,
+        ChatboxComponent,
         CompanyComponent,
         PartnerComponent,
         ServiceComponent,
