@@ -4,11 +4,14 @@
 	height: 750px;
 }
 
-.partner h2 {
-	padding-top: 50px;
-	font-weight: bolder;
+.partner h1 {
+	padding-top: 30px;
 	text-align: center;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: white; 
 }
+
+
 
 .partner .container .row .col-md-4 .image1 {
 	padding: 75px 0 50px 100px;
@@ -33,4 +36,8 @@
 
 .partner .container .social ul li a img {
 	margin-bottom: 0px; margin-right: 34px; width: 53px; height: 53px; object-fit: cover; display: inline-block;
+}
+
+.row1 {
+	margin-top: 50px;
 }

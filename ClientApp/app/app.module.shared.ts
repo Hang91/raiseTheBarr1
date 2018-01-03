@@ -24,6 +24,8 @@ import { FaqListComponent } from './components/faq/faq-list/faq-list.component';
 import { FaqItemComponent } from './components/faq/faq-list/faq-item/faq-item.component';
 import { FaqDetailComponent } from './components/faq/faq-detail/faq-detail.component';
 import { SendEmailService } from './services/sendemail.service';
+import { ChatboxComponent } from './components/home/chatbox/chatbox.component';
+import { ChatboxService } from './services/chatbox.service';
 
 
 
@@ -47,6 +49,7 @@ import { SendEmailService } from './services/sendemail.service';
         FaqListComponent,
         FaqItemComponent,
         FaqDetailComponent,
+        ChatboxComponent,
     ],
     imports: [
         CommonModule,
@@ -68,7 +71,8 @@ import { SendEmailService } from './services/sendemail.service';
         ])
     ],
     providers: [
-        SendEmailService
+        SendEmailService,
+        ChatboxService
     ]
 })
 export class AppModuleShared {

@@ -1,3 +1,13 @@
 .about {
-    height: 640px;
+    height: 800px;
+}
+
+h1 {
+	margin-top: 150px;
+	text-align: center;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+p {
+    font-size: 20px;
 }
