@@ -15,4 +15,8 @@ export class SendEmailService {
     return this.http.post('/api/sendemailforbeta', user);
   }
 
+  sendEmailForContact(user:any) {
+    return this.http.post('/api/sendemailforcontact', user);
+  }
+
 }

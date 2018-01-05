@@ -15,6 +15,63 @@
               <a href="contact@weraisethebarr.com" style="color: rgb(0, 0, 0)">  contact@weraisethebarr.com</a>
             </li>
           </ul>
+          <div class="contact-form-user-data">
+            <form (ngSubmit)="onSubmit()" #f="ngForm">
+              <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+                <div class="form-group">
+                  <label for="name">First Name</label>
+                  <input
+                    type="text"
+                    id="firstname"
+                    class="form-control"
+                    ngModel
+                    name="firstname"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastname"
+                    class="form-control"
+                    ngModel
+                    name="lastname"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    id="email"
+                    class="form-control"
+                    ngModel
+                    name="email"
+                    required
+                    email
+                    #email="ngModel">
+                  <span class="help-block" *ngIf="!email.valid && email.touched">Please input a valid email!</span>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    type="text"
+                    id="message"
+                    class="form-control"
+                    ngModel
+                    name="message"
+                    required
+                    message
+                    #message="ngModel"></textarea>
+                  <span class="help-block" *ngIf="!email.valid && email.touched">Please input a valid email!</span>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+            </form>
+            <div class="thanks" *ngIf="submitted">
+              <p>Thank you for your interested in Raise the Barr! </p>
+              <p>We will contact you soon!</p>
+            </div>
+        </div>
         </div>
       </div>
     </div>
