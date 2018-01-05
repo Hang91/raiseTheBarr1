@@ -1,3 +1,10 @@
-<p>
-  chatbox works!
-</p>
+<div class="chatbox" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <ng-container *ngFor="let message of messages | async">
+    <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+      {{ message.content }}
+    </div>
+  </ng-container>
+</div>
+<textarea class="form-control" [(ngModel)]="formValue" placeholder="Your Message" (keyup.enter)="sendMessage()" type="text"></textarea>
+<button class="btn btn-info" (click)="sendMessage()">Send</button>

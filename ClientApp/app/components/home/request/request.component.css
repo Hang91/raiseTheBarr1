@@ -1,5 +1,5 @@
 .container {
-	margin-top: 30px;
+	margin-top: 0px;
 }
 
 input.ng-invalid.ng-touched {
@@ -12,4 +12,18 @@ input.ng-invalid.ng-touched {
 
 .thanks {
 	margin-top: 30px;
+}
+
+p {
+	font-size: 20px;
+}
+
+label {
+	font-size: 20px;
+}
+
+.btn {
+	height: 40px;
+	width: 120px;
+	font-size: 20px;
 }

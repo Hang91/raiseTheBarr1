@@ -5,9 +5,7 @@ using System.Net.Mail;
 using System.Web;  
 using Microsoft.AspNetCore.Mvc;
 using raiseTheBarr1.Models;
-using System.Net.Mail;
 using System.Net;
-using System.Web;
 
 namespace raiseTheBarr1.Controllers
 {

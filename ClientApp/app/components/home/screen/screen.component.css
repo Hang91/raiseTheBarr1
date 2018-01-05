@@ -1,5 +1,5 @@
 .up{
-	height: 1200px;
+	height: 1100px;
 }
 
 .down{
@@ -27,14 +27,18 @@ p {
 
 .btn-sl {
     display: block;
-    margin: 0 auto;
-    height: 100px;
-    width: 300px;
-    font-size: 30px;
+    margin: 0 auto 0 auto;
+    height: 80px;
+    width: 240px;
+    font-size: 25px;
 }
 
 .button-row {
 	margin-top: 100px;
+}
+
+.form-row {
+	margin-top: 0px;
 }
 
 [hidden] {
